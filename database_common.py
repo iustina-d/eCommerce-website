@@ -9,7 +9,7 @@ def get_connection_string():
     user_name = "postgres"
     password  = "02041999"
     host = "localhost"
-    database_name = "Library"
+    database_name = "Book-Black"
 
     env_variables_defined = user_name and password and host and database_name
     
