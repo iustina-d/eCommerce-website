@@ -82,9 +82,11 @@ content%}
   <div class="cards">
     <h1>Book-Black</h1>
     <div class="cards-container">
+      {%for book in books%}
       <div class="card">
-        <!-- get data from db -->
+        <img src="/static/{{book.image}}" alt="book image" />
       </div>
+      {%endfor%}
     </div>
   </div>
 </div>
