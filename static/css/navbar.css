@@ -25,33 +25,46 @@
   align-items: center;
   justify-content: center;
 }
-
-.search-bar:hover {
-  color: rgb(121, 118, 118);
+.navbar-content form {
+  position: relative;
+  height: 50px;
+  width: 500px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border-radius: 20px;
 }
-.search-bar input {
-  height: 4rem;
-  width: 30rem;
-  border-radius: 25rem;
-  font-size: 3rem;
+.text_input {
+  height: 56px;
+  width: 100%;
+  line-height: 30px;
+  font-size: 20px;
   border: none;
-  padding: 0 5rem;
+  padding-left: 1rem;
 }
-.search-bar input:focus {
+.text_input:focus {
   outline: none;
 }
-.search-bar .search-icon {
-  display: flex;
-  align-items: center;
-  position: relative;
-  padding: 0 1rem;
-  bottom: 3rem;
-  font-size: 2rem;
-}
-
-.search-bar-icon .fa-search {
+.navbar-content form button {
   position: absolute;
-  margin-right: 5rem;
+  height: 50px;
+  line-height: 50px;
+  right: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  background: rgb(87, 87, 86);
+  color: white;
+  border: none;
+  width: 30%;
+  font-weight: bold;
+  border-radius: 0;
+  transition: all 0.5s;
+}
+.navbar-content form button:hover {
+  background: rgb(121, 118, 118);
+  color: black;
+  cursor: pointer;
 }
 #log-in {
   margin-right: 2rem;
