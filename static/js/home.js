@@ -1,5 +1,6 @@
 //menu
 const categories = document.querySelectorAll(".category")
+
 categories.forEach((category) => {
   category.addEventListener("click", () => {
     if (category.classList.contains("open")) {
