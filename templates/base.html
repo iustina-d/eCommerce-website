@@ -22,15 +22,16 @@
           </a>
         </div>
         <div class="navbar-content">
-          <form action="{{ url_for('get_books_sing_search_bar')}}" , method="post">
+          <form action="{{ url_for('get_books_using_page_number',page=1)}}" , method="post" autocomplete="off">
             <input
               type="text"
               id="myInput"
               placeholder="Search for names.."
               title="Type in a name"
               name="myInput"
+              class="text_input"
             />
-            <button type="submit" class="btn">Search</button>
+            <button type="submit"  value="Save">Search</button>
           </form>
           <i class="fa fa-fw fa-user" id="log-in"></i>
           <i class="fa-solid fa-cart-shopping" id="cart"></i>
@@ -120,5 +121,6 @@
       <script src="/static/js/base.js"></script>
       <script src="/static/js/home.js"></script>
       <script src="/static/js/pagination.js"></script>
+      <script src="/static/js/pagination_search.js"></script>
     </body>
     </html>
