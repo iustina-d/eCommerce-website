@@ -1,5 +1,5 @@
-{% extends "base.html" %} {%block title%}Book - Black{%endblock title%} {%block
-content%}
+{% extends "base.html" %} {%block title%}Book - Black{%endblock title%} Book -
+Black{%block content%}
 <div class="page-content">
   <div class="menu">
     <div class="accordion">
@@ -79,14 +79,42 @@ content%}
       </form>
     </div>
   </div>
-  <div class="cards">
-    <h1>Book-Black</h1>
-    <div class="cards-container">
+  <div class="page-content-cards">
+    <h1>Book - Black</h1>
+    <div class="cards">
       {%for book in books%}
-      <div class="card">
-        <img src="/static/{{book.image}}" alt="book image" />
+      <div class="card-wrapper">
+        <div class="card">
+          <img src="/static/{{book.image}}" alt="book image" />
+          <div class="book-info">
+            <h2>Name:</h2>
+            <p>{{book.book_name}}</p>
+          </div>
+          <div class="book-info">
+            <h3>Author:</h3>
+            <p>{{book.author_name}}</p>
+          </div>
+          <button class="btn">Add</button>
+        </div>
       </div>
       {%endfor%}
+    </div>
+    <div class="pagination">
+      <button class="btn1" onclick="Btn(-1)">
+        <img src="/static/images/arrow.png" alt="left arrow" /> prev
+      </button>
+      <ul>
+        <li class="link active" value="1" onclick="activeLink()">1</li>
+        <li class="link" value="2" onclick="activeLink()">2</li>
+        <li class="link" value="3" onclick="activeLink()">3</li>
+        <li class="link" value="4" onclick="activeLink()">4</li>
+        <li class="link" value="5" onclick="activeLink()">5</li>
+        <li class="link" value="6" onclick="activeLink()">6</li>
+      </ul>
+      <button class="btn2" onclick="Btn(+1)">
+        next
+        <img src="/static/images/arrow.png" alt="right arrow" />
+      </button>
     </div>
   </div>
 </div>
