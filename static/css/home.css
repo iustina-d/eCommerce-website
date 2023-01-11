@@ -1,8 +1,11 @@
+.page-content {
+  display: flex;
+}
+
 /* meniu */
 .menu {
-  position: fixed;
   background-color: rgb(68, 66, 66);
-  height: calc(100vh - 0.1px);
+  height: 100%;
   width: 400px;
 }
 
@@ -122,12 +125,12 @@
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-form .btn {
+.btn {
   display: block;
   color: #fff;
   padding: 0.625rem 3rem;
   font-size: 1rem;
-  background-color: #3f3d56;
+  background-color: rgb(47, 45, 45);
   margin-top: 1.25rem;
   border: none;
   outline: none;
@@ -135,20 +138,117 @@ form .btn {
   transition: opacity 0.2s ease-in-out;
   margin: 0 auto;
 }
-form .btn:hover {
+.btn:hover {
   cursor: pointer;
-  opacity: 0.75;
+  color: #020203;
+  background-color: rgb(65, 62, 62);
+  /* opacity: 0.75; */
 }
 
 /* cards */
-.cards {
-  background-color: rgb(177, 171, 171);
+.page-content-cards {
   height: calc(100vh - 0.1px);
-  padding: 1rem 1rem 1rem 420px;
-  width: 79%;
+  width: calc(100vw - 415px);
+  background-color: rgb(177, 171, 171);
+  padding-bottom: 25rem;
 }
-.cards h1 {
+
+h1 {
   color: black;
   text-align: center;
   font-size: 4rem;
+  padding: 1rem 0 2rem;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  height: calc(100vh - 0.1px);
+  text-align: center;
+  padding: 2rem;
+  line-height: 1.2rem;
+}
+
+.card-wrapper {
+  display: block;
+  background-color: rgb(104, 103, 103);
+  width: 300px;
+  height: 450px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 25%;
+}
+.card img {
+  display: block;
+  margin: 1rem auto;
+  width: 250px;
+  height: 270px;
+  border-radius: 15%;
+}
+.card h2,
+h3 {
+  color: antiquewhite;
+}
+.card p {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.pagination {
+  width: calc(100vw - 415px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  margin-top: 8rem;
+  /* margin-bottom: 4rem; */
+  /* border-radius: 6px; */
+}
+
+.pagination ul {
+  margin: 20px 30px;
+}
+.pagination ul li {
+  display: inline-block;
+  margin: 0 10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 45px;
+  cursor: pointer;
+  background-position: 0 -45px;
+  transition: background-position 0.5s;
+}
+
+.pagination ul li.active {
+  color: #fff;
+  background-image: linear-gradient(#ff4568, #ff4568);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.btn1,
+.btn2 {
+  display: inline-block;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 500;
+  color: #383838;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn1 img {
+  width: 24px;
+  margin-right: 15px;
+}
+.btn2 img {
+  width: 24px;
+  margin-left: 15px;
+  transform: rotate(180deg);
 }
