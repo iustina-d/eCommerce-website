@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="/static/css/navbar.css" />
     <link rel="stylesheet" href="/static/css/home.css" />
     <link rel="stylesheet" href="/static/css/footer.css" />
-    <link rel="stylesheet" href="/static/css/hero_section.css">
+    <link rel="stylesheet" href="/static/css/hero_section.css" />
+    <link rel="stylesheet" href="/static/css/base.css" />
     <title>{% block title %}Books store {% endblock %}</title>
   </head>
   <body>
@@ -24,7 +25,12 @@
         </div>
         <div class="navbar-content">
           <div class="search_bar">
-            <form action="{{ url_for('display_search_bar_result')}}" , method="post" autocomplete="off">
+            <form
+              action="{{ url_for('display_search_bar_result')}}"
+              ,
+              method="post"
+              autocomplete="off"
+            >
               <input
                 type="text"
                 id="myInput"
@@ -33,104 +39,112 @@
                 name="myInput"
                 class="text_input"
               />
-              <button type="submit"  value="Save">Search</button>
+              <button type="submit" value="Save">Search</button>
             </form>
           </div>
           <a class="admin" href="{{ url_for('log_in')}}" , method="post">
             <i class="fa fa-fw fa-user" id="log-in"></i>
           </a>
-          <a class="admin" href="{{ url_for('display_cart_content')}}" , method="post">
-            <i class="fa-solid fa-cart-shopping" id="cart"></i>
+          <a
+            class="admin"
+            href="{{ url_for('display_cart_content')}}"
+            ,
+            method="post"
+          >
+            <span class="cart-span"
+              ><i class="fa-solid fa-cart-shopping" id="cart"> </i>
+              <span class="badge">0</span>
+            </span>
           </a>
         </div>
       </div>
-      <div class="hero-section">
-        <h1>Book - Black</h1>
-      </div>
-      <div class="page-container">
-        {% block content %}{% endblock %}
-      </div>
-      <div class='footer-container'>
-        <div class='footer-links'>
-        <div class='footer-link-wrapper'>
-            <div class='footer-link-items'>
-                <h2>About Us</h2>
-                <a href="/">How is works</a>
-                <a href="/">Testimonial</a>
-                <a href="/">Careers</a>
-                <a href="/">Inventors</a>
-                <a href="/">Terms of Services</a>
-            </div>
-            <div class='footer-link-items'>
-                <h2>Contact Us</h2>
-                <a href="/">Contact</a>
-                <a href="/">Support</a>
-                <a href="/">Destinations</a>
-                <a href="/">Sponsorships</a>
-            </div>
-            <div class='footer-link-items'>
-                <h2>Videos</h2>
-                <a href="/">Submit Video</a>
-                <a href="/">Ambassadors</a>
-                <a href="/">Agency</a>
-                <a href="/">Influencer</a>
-            </div>
-            <div class='footer-link-items'>
-                <h2>Social Media</h2>
-                <a href="/">Instagram</a>
-                <a href="/">Facebook</a>
-                <a href="/">Youtube</a>
-                <a href="/">Twitter</a>
-            </div>
+    </div>
+    <div class="hero-section">
+      <h1 class="hero-title">Book - Black</h1>
+    </div>
+    <div class="page-container">{% block content %}{% endblock %}</div>
+    <div class="footer-container">
+      <div class="footer-links">
+        <div class="footer-link-wrapper">
+          <div class="footer-link-items">
+            <h2>About Us</h2>
+            <a href="/">How is works</a>
+            <a href="/">Testimonial</a>
+            <a href="/">Careers</a>
+            <a href="/">Inventors</a>
+            <a href="/">Terms of Services</a>
+          </div>
+          <div class="footer-link-items">
+            <h2>Contact Us</h2>
+            <a href="/">Contact</a>
+            <a href="/">Support</a>
+            <a href="/">Destinations</a>
+            <a href="/">Sponsorships</a>
+          </div>
+          <div class="footer-link-items">
+            <h2>Videos</h2>
+            <a href="/">Submit Video</a>
+            <a href="/">Ambassadors</a>
+            <a href="/">Agency</a>
+            <a href="/">Influencer</a>
+          </div>
+          <div class="footer-link-items">
+            <h2>Social Media</h2>
+            <a href="/">Instagram</a>
+            <a href="/">Facebook</a>
+            <a href="/">Youtube</a>
+            <a href="/">Twitter</a>
+          </div>
         </div>
-
       </div>
-      <section class='social-media'>
-        <div class='social-media-wrap'>
-            <div class='footer-logo'>
-                <a href="/" class='social-logo'>
-                    TSW <FontAwesomeIcon icon={faCircleInfo}/>
-                </a>
-            </div>
-            <small class='website-rights'>TSW © 2020</small>
-            <div class='social-icons'>
-                <a 
-                    class='social-icon-link facebook' 
-                    href="/" 
-                    target='_blank' 
-                    aria-label='Facebook'>
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-                <a 
-                    class='social-icon-link instagram' 
-                    href="/" 
-                    target='_blank' 
-                    aria-label='Instagram'>
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a
-                    class='social-icon-link youtube'
-                    href="/"
-                    target='_blank'
-                    aria-label='Youtube'
-                    >
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
-                <a
-                    class='social-icon-link twitter'
-                    href="/"
-                    target='_blank'
-                    aria-label='Twitter'
-                    >
-                    <i class="fa-brands fa-square-twitter"></i>
-                </a>
-            </div>
+      <section class="social-media">
+        <div class="social-media-wrap">
+          <div class="footer-logo">
+            <a href="/" class="social-logo">
+              Book-Black <FontAwesomeIcon icon="{faCircleInfo}" />
+            </a>
+          </div>
+          <small class="website-rights">Book-Black © 2020</small>
+          <div class="social-icons">
+            <a
+              class="social-icon-link facebook"
+              href="/"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a
+              class="social-icon-link instagram"
+              href="/"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              class="social-icon-link youtube"
+              href="/"
+              target="_blank"
+              aria-label="Youtube"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a
+              class="social-icon-link twitter"
+              href="/"
+              target="_blank"
+              aria-label="Twitter"
+            >
+              <i class="fa-brands fa-square-twitter"></i>
+            </a>
+          </div>
         </div>
       </section>
     </div>
-      <script src="/static/js/base.js"></script>
-      <script src="/static/js/home.js"></script>
-      <script src="/static/js/pagination.js"></script>
-      <script src="/static/js/pagination_search.js"></script>
-    </body>
-    </html>
+    <script src="/static/js/base.js"></script>
+    <script src="/static/js/home.js"></script>
+    <script src="/static/js/pagination.js"></script>
+    <script src="/static/js/pagination_search.js"></script>
+  </body>
+</html>
