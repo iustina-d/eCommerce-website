@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 5rem;
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  background-color: rgb(237 237 237);
+}
+
+h1 {
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  max-width: 1000px;
+  padding: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 25px;
+}
+a {
+  text-decoration: none;
+  color: rgb(50, 50, 50);
+}
+.container a .fa-xmark {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 2rem;
+}
+.fa-xmark:hover,
+.fa-arrow-up:hover,
+.fa-arrow-down:hover {
+  color: rgb(124 121 121);
+}
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.table {
+  width: 100%;
+  border: 1px solid #eeeeee;
+}
+
+.table-header {
+  display: flex;
+  width: 100%;
+  background: #000;
+  padding: 18px 0;
+}
+
+.table-row {
+  display: flex;
+  width: 100%;
+  padding: 18px 0;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.table-row:nth-of-type(odd) {
+  background: #eeeeee;
+}
+.table-row img {
+  width: 100px;
+  height: 100px;
+  border-radius: 25px;
+}
+.table-row img:hover {
+  transform: scale(1.2);
+}
+
+.table-data,
+.header__item {
+  flex: 1 1 20%;
+  text-align: center;
+}
+
+.header__item {
+  text-transform: uppercase;
+  color: white;
+  position: relative;
+  display: inline-block;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+form {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+}
+form h2 {
+  font-size: 2rem;
+  margin-right: 2rem;
+}
+form h2 strong {
+  margin-left: 1rem;
+}
+form .pay-method {
+  display: flex;
+  align-items: center;
+}
+form .pay-method h3 {
+  margin: 1rem;
+}
