@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/static/css/navbar.css" />
     <link rel="stylesheet" href="/static/css/home.css" />
     <link rel="stylesheet" href="/static/css/footer.css" />
+    <link rel="stylesheet" href="/static/css/hero_section.css">
     <title>{% block title %}Books store {% endblock %}</title>
   </head>
   <body>
@@ -22,20 +23,29 @@
           </a>
         </div>
         <div class="navbar-content">
-          <form action="{{ url_for('get_books_using_page_number',page=1)}}" , method="post" autocomplete="off">
-            <input
-              type="text"
-              id="myInput"
-              placeholder="Search for names.."
-              title="Type in a name"
-              name="myInput"
-              class="text_input"
-            />
-            <button type="submit"  value="Save">Search</button>
-          </form>
-          <i class="fa fa-fw fa-user" id="log-in"></i>
-          <i class="fa-solid fa-cart-shopping" id="cart"></i>
+          <div class="search_bar">
+            <form action="{{ url_for('display_search_bar_result')}}" , method="post" autocomplete="off">
+              <input
+                type="text"
+                id="myInput"
+                placeholder="Search for names.."
+                title="Type in a name"
+                name="myInput"
+                class="text_input"
+              />
+              <button type="submit"  value="Save">Search</button>
+            </form>
+          </div>
+          <a class="admin" href="{{ url_for('log_in')}}" , method="post">
+            <i class="fa fa-fw fa-user" id="log-in"></i>
+          </a>
+          <a class="admin" href="{{ url_for('display_cart_content')}}" , method="post">
+            <i class="fa-solid fa-cart-shopping" id="cart"></i>
+          </a>
         </div>
+      </div>
+      <div class="hero-section">
+        <h1>Book - Black</h1>
       </div>
       <div class="page-container">
         {% block content %}{% endblock %}
