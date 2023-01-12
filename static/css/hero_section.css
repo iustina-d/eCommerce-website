@@ -1,0 +1,25 @@
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 900px;
+  width: 100%;
+  /* background: rgb(175, 167, 170); */
+  background: radial-gradient(
+    circle,
+    rgba(175, 167, 170, 1) 0%,
+    rgba(124, 118, 120, 1) 68%,
+    rgba(47, 44, 44, 1) 100%
+  );
+}
+.hero-section:hover {
+  background: radial-gradient(
+    circle,
+    rgba(175, 167, 170, 1) 10%,
+    rgba(124, 118, 120, 1) 28%,
+    rgba(47, 44, 44, 1) 56%
+  );
+}
+.hero-section h1 {
+  font-size: 8rem;
+}
