@@ -5,7 +5,7 @@
 
 .container {
   display: block;
-  background-color: rgba(109, 109, 109, 0.623);
+  background-color: rgb(131 127 127 / 62%);;
 }
 /* navbar */
 .navbar {
@@ -14,8 +14,10 @@
   border-bottom: 30rem;
   padding: 1rem;
 }
+
 .logo {
-  width: 20rem;
+  width: 15rem;
+  height: 100px;
   box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem rgba(255, 252, 252, 0.2);
   border-radius: 5rem;
 }
@@ -77,7 +79,19 @@
   color: rgb(121, 118, 118);
 }
 
+.cart-span {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: "Glyphicons Halflings";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
 #cart {
+  /* position: relative; */
   font-size: 3rem;
   cursor: pointer;
 }
@@ -85,7 +99,21 @@
 #cart:hover {
   color: rgb(121, 118, 118);
 }
-
+.badge {
+  display: inline-block;
+  position: absolute;
+  background: red;
+  top: -10px;
+  right: -10px;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+}
 .admin {
   color: #575756;
   transition: all 0.5s ease-in-out;
