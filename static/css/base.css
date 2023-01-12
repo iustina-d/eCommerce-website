@@ -1,0 +1,18 @@
+.btn {
+  display: block;
+  color: #fff;
+  padding: 0.625rem 3rem;
+  font-size: 1rem;
+  background-color: rgb(47, 45, 45);
+  margin-top: 1.25rem;
+  border: none;
+  outline: none;
+  border-radius: 0.625rem;
+  transition: opacity 0.2s ease-in-out;
+  margin: 0 auto;
+}
+.btn:hover {
+  cursor: pointer;
+  color: #020203;
+  background-color: rgb(65, 62, 62);
+}
