@@ -1,121 +1,26 @@
-{% extends "base.html" %} {%block title%}Book - Black{%endblock title%} Book -
-Black{%block content%}
-<div class="page-content">
-  <div class="menu">
-    <div class="accordion">
-      <form method="post">
-        <h1>Choose the categories</h1>
-        <div class="wrapper">
-          <h2 class="category">Price</h2>
-          <p class="options">
-            <label class="container_options"
-              >10-50
-              <input type="checkbox" checked="checked" />
-              <span class="checkmark"></span>
-            </label>
-            <label class="container_options"
-              >50-100
-              <input type="checkbox" checked="checked" />
-              <span class="checkmark"></span>
-            </label>
-            <label class="container_options"
-              >100-150
-              <input type="checkbox" checked="checked" />
-              <span class="checkmark"></span>
-            </label>
-          </p>
-        </div>
-        <div class="wrapper">
-          <h2 class="category">Genre</h2>
-          <p class="options">
-            <label class="container_options"
-              >Adventure
-              <input type="checkbox" checked="checked" />
-              <span class="checkmark"></span>
-            </label>
-            <label class="container_options"
-              >Action
-              <input type="checkbox" checked="checked" />
-              <span class="checkmark"></span>
-            </label>
-            <label class="container_options"
-              >Fantasy
-              <input type="checkbox" checked="checked" />
-              <span class="checkmark"></span>
-            </label>
-            <label class="container_options"
-              >Historical
-              <input type="checkbox" checked="checked" />
-              <span class="checkmark"></span>
-            </label>
-            <label class="container_options"
-              >Horror
-              <input type="checkbox" checked="checked" />
-              <span class="checkmark"></span>
-            </label>
-            <label class="container_options"
-              >Mystery
-              <input type="checkbox" checked="checked" />
-              <span class="checkmark"></span>
-            </label>
-            <label class="container_options"
-              >Poetry
-              <input type="checkbox" checked="checked" />
-              <span class="checkmark"></span>
-            </label>
-            <label class="container_options"
-              >Romance
-              <input type="checkbox" checked="checked" />
-              <span class="checkmark"></span>
-            </label>
-            <label class="container_options"
-              >Short Stories
-              <input type="checkbox" checked="checked" />
-              <span class="checkmark"></span>
-            </label>
-          </p>
-        </div>
-        <button class="btn" type="submit">Submit</button>
-      </form>
-    </div>
+{% extends "seach_bar_result.html" %} {%block pagination%}
+
+<div class="pagination">
+  <div class="left">
+    <button class="btn1" onclick="Arr(1)">
+      <img src="/static/images/arrow.png" alt="left arrow" />
+    </button>
+    <button class="btn1" onclick="Btn(-1)">prev</button>
   </div>
-  <div class="page-content-cards">
-    <h1>Book - Black</h1>
-    <div class="cards">
-      {%for book in books%}
-      <div class="card-wrapper">
-        <div class="card">
-          <img src="/static/{{book.image}}" alt="book image" />
-          <div class="book-info">
-            <h2>Name:</h2>
-            <p>{{book.book_name}}</p>
-          </div>
-          <div class="book-info">
-            <h3>Author:</h3>
-            <p>{{book.author_name}}</p>
-          </div>
-          <button class="btn">Add</button>
-        </div>
-      </div>
-      {%endfor%}
-    </div>
-    <div class="pagination">
-      <button class="btn1" onclick="Btn(-1)">
-        <img src="/static/images/arrow.png" alt="left arrow" /> prev
-      </button>
-      <ul>
-        <li class="link active" value="1" onclick="activeLink()">1</li>
-        <li class="link" value="2" onclick="activeLink()">2</li>
-        <li class="link" value="3" onclick="activeLink()">3</li>
-        <li class="link" value="4" onclick="activeLink()">4</li>
-        <li class="link" value="5" onclick="activeLink()">5</li>
-        <li class="link" value="6" onclick="activeLink()">6</li>
-      </ul>
-      <button class="btn2" onclick="Btn(+1)">
-        next
-        <img src="/static/images/arrow.png" alt="right arrow" />
-      </button>
-    </div>
+  <ul>
+    <li class="link active" value="1" onclick="activeLink()">1</li>
+    <li class="link" value="2" onclick="activeLink()">2</li>
+    <li class="link" value="3" onclick="activeLink()">3</li>
+    <li class="link" value="4" onclick="activeLink()">4</li>
+    <li class="link" value="5" onclick="activeLink()">5</li>
+    <li class="link" value="6" onclick="activeLink()">6</li>
+  </ul>
+  <div class="left">
+    <button class="btn2" onclick="Btn(+1)">next</button>
+    <button class="btn2" onclick="Arr(6)">
+      <img src="/static/images/arrow.png" alt="right arrow" />
+    </button>
   </div>
 </div>
+
 {% endblock %}
