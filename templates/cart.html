@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/ae97ef602e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/cart.css" />
+    <title>Cart</title>
+  </head>
+  <body>
+    <div class="container">
+      <a href="{{ url_for('main')}}"><i class="fa-solid fa-xmark"></i></a>
+      <h1>Cart Content</h1>
+      <div class="table">
+        <div class="table-header">
+          <div class="header__item">Image</div>
+          <div class="header__item">Name</div>
+          <div class="header__item">Author</div>
+          <div class="header__item">Items</div>
+          <div class="header__item">Price</div>
+          <div class="header__item"></div>
+        </div>
+        <div class="table-content">
+          <div class="table-row">
+            <div class="table-data">
+              <img src="/static/images/img_2.jpg" alt="image with a book" />
+            </div>
+            <div class="table-data">The imperfections of memory</div>
+            <div class="table-data">Angelina Audo</div>
+            <div class="table-data">
+              <i class="fa-solid fa-arrow-up"></i>1<i
+                class="fa-solid fa-arrow-down"
+              ></i>
+            </div>
+            <div class="table-data">15 lei</div>
+            <div class="table-data"><i class="fa-solid fa-xmark"></i></div>
+          </div>
+          <div class="table-row">
+            <div class="table-data">
+              <img src="/static/images/img_2.jpg" alt="image with a book" />
+            </div>
+            <div class="table-data">The imperfections of memory</div>
+            <div class="table-data">Angelina Audo</div>
+            <div class="table-data">
+              <i class="fa-solid fa-arrow-up"></i>1<i
+                class="fa-solid fa-arrow-down"
+              ></i>
+            </div>
+            <div class="table-data">15 lei</div>
+            <div class="table-data"><i class="fa-solid fa-xmark"></i></div>
+          </div>
+          <div class="table-row">
+            <div class="table-data">
+              <img src="/static/images/img_2.jpg" alt="image with a book" />
+            </div>
+            <div class="table-data">The imperfections of memory</div>
+            <div class="table-data">Angelina Audo</div>
+            <div class="table-data">
+              <i class="fa-solid fa-arrow-up"></i>1<i
+                class="fa-solid fa-arrow-down"
+              ></i>
+            </div>
+            <div class="table-data">15 lei</div>
+            <div class="table-data"><i class="fa-solid fa-xmark"></i></div>
+          </div>
+      </div>
+    </div>
+      <form action="{{ url_for('card')}}">
+        <h2>Total price:<strong>150 lei</strong></h2>
+        <div class="pay-method">
+          <h3>Click here to pay</h3>
+          <button class="btn">PAY</button>
+        </div>
+        
+      </form>
+  </body>
+</html>
