@@ -1,0 +1,105 @@
+{% extends "base.html" %} {%block title%}Book - Black{%endblock title%} {%block
+content%}
+<div class="page-content">
+  <div class="menu">
+    <div class="accordion">
+      <form method="post">
+        <h1>Choose the categories</h1>
+        <div class="wrapper">
+          <h2 class="category">Price</h2>
+          <p class="options">
+            <label class="container_options"
+              >10-50
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container_options"
+              >50-100
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container_options"
+              >100-150
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+          </p>
+        </div>
+        <div class="wrapper">
+          <h2 class="category">Genre</h2>
+          <p class="options">
+            <label class="container_options"
+              >Adventure
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container_options"
+              >Action
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container_options"
+              >Fantasy
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container_options"
+              >Historical
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container_options"
+              >Horror
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container_options"
+              >Mystery
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container_options"
+              >Poetry
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container_options"
+              >Romance
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container_options"
+              >Short Stories
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+          </p>
+        </div>
+        <button class="btn" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="page-content-cards">
+    <div class="cards">
+      {%for book in books%}
+      <div class="card-wrapper">
+        <div class="card">
+          <img src="/static/{{book.image}}" alt="book image" />
+          <div class="book-info">
+            <h2>Name:</h2>
+            <p>{{book.book_name}}</p>
+          </div>
+          <div class="book-info">
+            <h3>Author:</h3>
+            <p>{{book.author_name}}</p>
+          </div>
+          <button class="btn">Add</button>
+        </div>
+      </div>
+      {%endfor%}
+    </div>
+    {% block pagination %}{% endblock %} {% block searchpagination %}{%
+    endblock%}
+  </div>
+</div>
+{% endblock %}
