@@ -31,8 +31,13 @@ function getPageNumber(value) {
 }
 function Btn(value) {
   page = getPageNumber(value)
-  if ((page > 1 && value == -1) || (page < 5 && value == 1)) {
+  if ((page >= 1 && value == -1) || (page <= 6 && value == 1)) {
     currentValue = page.toString()
     window.location = general_url + currentValue
   }
+}
+
+function Arr(value) {
+  currentValue = value.toString()
+  window.location = general_url + currentValue
 }
