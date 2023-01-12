@@ -44,9 +44,9 @@ def user_page():
 def display_cart_content():
   return render_template("cart.html")
 
-@app.route("/pay",methods=["POST"])
-def pay():
-  return render_template("cart.html")
+@app.route("/card")
+def card():
+  return render_template("card.html")
 
 @app.route("/search_gen",methods=["POST"])
 def display_search_gen():
