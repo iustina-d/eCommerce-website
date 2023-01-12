@@ -59,7 +59,7 @@
   width: 30%;
   font-weight: bold;
   border-radius: 0;
-  transition: all 0.5s;
+  transition: all 0.5s ease-in-out;
 }
 .navbar-content form button:hover {
   background: rgb(121, 118, 118);
@@ -84,4 +84,9 @@
 
 #cart:hover {
   color: rgb(121, 118, 118);
+}
+
+.admin {
+  color: #575756;
+  transition: all 0.5s ease-in-out;
 }

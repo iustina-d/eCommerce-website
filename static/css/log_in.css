@@ -12,7 +12,11 @@ img {
   max-width: 100%;
   width: 100%;
 }
-body {
+input,
+button {
+  font-family: inherit;
+}
+.content {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   color: #3f3d56;
@@ -20,10 +24,6 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-}
-input,
-button {
-  font-family: inherit;
 }
 .container {
   background-color: #f1f1f1;
@@ -80,6 +80,19 @@ button {
 .container form .btn:hover {
   cursor: pointer;
   opacity: 0.75;
+}
+.registration {
+  display: flex;
+  text-align: start;
+  align-items: center;
+}
+.registration h3 {
+  margin: 1.2rem 1rem 0;
+}
+.arrow_image {
+  width: 120px;
+  height: 80px;
+  padding: 2rem;
 }
 
 @media (min-width: 700px) {

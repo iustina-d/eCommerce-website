@@ -5,7 +5,7 @@
 /* meniu */
 .menu {
   background-color: rgb(68, 66, 66);
-  height: 100%;
+  height: 76.55rem;
   width: 400px;
 }
 
@@ -147,7 +147,7 @@
 
 /* cards */
 .page-content-cards {
-  height: calc(100vh - 0.1px);
+  height: calc(100vh - 123px);
   width: calc(100vw - 415px);
   background-color: rgb(177, 171, 171);
   padding-bottom: 25rem;
@@ -225,7 +225,7 @@ h3 {
 
 .pagination ul li.active {
   color: #fff;
-  background-image: linear-gradient(#ff4568, #ff4568);
+  background-image: linear-gradient(#676666, #111111);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
