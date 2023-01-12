@@ -3,28 +3,8 @@ content%}
 <div class="page-content">
   <div class="menu">
     <div class="accordion">
-      <form method="post">
+      <form action="{{ url_for('main')}}">
         <h1>Choose the categories</h1>
-        <div class="wrapper">
-          <h2 class="category">Price</h2>
-          <p class="options">
-            <label class="container_options"
-              >10-50
-              <input type="checkbox" checked="checked" />
-              <span class="checkmark"></span>
-            </label>
-            <label class="container_options"
-              >50-100
-              <input type="checkbox" checked="checked" />
-              <span class="checkmark"></span>
-            </label>
-            <label class="container_options"
-              >100-150
-              <input type="checkbox" checked="checked" />
-              <span class="checkmark"></span>
-            </label>
-          </p>
-        </div>
         <div class="wrapper">
           <h2 class="category">Genre</h2>
           <p class="options">
@@ -75,6 +55,51 @@ content%}
             </label>
           </p>
         </div>
+        <div class="wrapper">
+          <h2 class="category">Pages</h2>
+          <p class="options">
+            <label class="container_options"
+              >100-150
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container_options"
+              >150-300
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container_options"
+              >300-500
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container_options"
+              >500-100
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+          </p>
+        </div>
+        <div class="wrapper">
+          <h2 class="category">Price</h2>
+          <p class="options">
+            <label class="container_options"
+              >10-50
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container_options"
+              >50-100
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container_options"
+              >100-150
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+          </p>
+        </div>
         <button class="btn" type="submit">Submit</button>
       </form>
     </div>
@@ -84,16 +109,22 @@ content%}
       {%for book in books%}
       <div class="card-wrapper">
         <div class="card">
-          <img src="/static/{{book.image}}" alt="book image" />
+          <a href="{{ url_for('main')}}">
+            <img src="/static/{{book.image}}" alt="book image" />
+          </a>
           <div class="book-info">
-            <h2>Name:</h2>
+            <h3>Name:</h3>
             <p>{{book.book_name}}</p>
           </div>
           <div class="book-info">
             <h3>Author:</h3>
             <p>{{book.author_name}}</p>
           </div>
-          <button class="btn">Add</button>
+          <div class="book-info">
+            <h3>Price:</h3>
+            <p>{{book.price}}25lei</p>
+          </div>
+          <button class="btn badge_message">Add</button>
         </div>
       </div>
       {%endfor%}
