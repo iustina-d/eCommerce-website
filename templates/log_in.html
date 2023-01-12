@@ -4,35 +4,49 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/static/css/log_in.css">
+    <link rel="stylesheet" href="/static/css/log_in.css" />
     <title>Sign Up Form</title>
   </head>
   <body>
-    <div class="container">
-      <form
-        autocomplete="off"
-        action="https://formsubmit.co/iusti_iustina1999@yahoo.com"
-        method="POST"
-      >
-        <h1>Log in</h1>
-        <div class="form-inner">
-          <article>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required />
-          </article>
+    <div class="arrow_image">
+      <a class="left_arrow" href="{{ url_for('main')}}"
+        ><img src="/static/images/arrow.png" alt="left arrow"
+      /></a>
+    </div>
+    <div class="content">
+      <div class="container">
+        <form
+          autocomplete="off"
+          action="https://formsubmit.co/iusti_iustina1999@yahoo.com"
+          method="POST"
+        >
+          <h1>Log in</h1>
+          <div class="form-inner">
+            <article>
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" required />
+            </article>
+          </div>
+          <div class="form-inner">
+            <article>
+              <label for="password-one">Password</label>
+              <input
+                type="password"
+                name="password-one"
+                id="password-one"
+                required
+              />
+            </article>
+            <button class="btn" type="submit">LOG IN</button>
+          </div>
+        </form>
+        <div class="registration">
+          <form action="{{ url_for('registrate')}}" method="get">
+            <button class="btn" type="submit">Sign Up</button>
+          </form>
+          <h3>To create new account</h3>
         </div>
-        <div class="form-inner">
-          <article>
-            <label for="password-one">Password</label>
-            <input
-              type="password"
-              name="password-one"
-              id="password-one"
-              required
-            />
-          </article>
-        <button class="btn" type="submit">LOG IN</button>
-      </form>
+      </div>
     </div>
     <link rel="stylesheet" href="index.css" />
   </body>

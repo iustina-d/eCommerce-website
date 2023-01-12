@@ -8,94 +8,98 @@
     <title>Sign Up Form</title>
   </head>
   <body>
-    <div class="container">
-      <form
-        autocomplete="off"
-        action="https://formsubmit.co/iusti_iustina1999@yahoo.com"
-        method="POST"
-      >
-        <h1>Create An Account</h1>
-        <div class="form-inner">
-          <article>
-            <label for="firstName">First name</label>
-            <input type="text" name="firstName" id="firstName" required />
-          </article>
-          <article>
-            <label for="lastName">Last name</label>
-            <input type="text" name="lastName" id="lastName" required />
-          </article>
-        </div>
-        <div class="form-inner">
-          <article>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required />
-          </article>
-          <article>
-            <label for="dob">Date of birth</label>
-            <input type="date" name="dob" id="dob" required />
-          </article>
-        </div>
-        <div class="form-inner">
-          <article>
-            <label for="password-one">Password</label>
-            <input
-              type="password"
-              name="password-one"
-              id="password-one"
-              required
-            />
-          </article>
-          <article>
-            <label for="passwort-two">Confirm password</label>
-            <input
-              type="password"
-              name="password-two"
-              id="password-two"
-              required
-            />
-          </article>
-        </div>
-        <div class="checkboxes">
-          <article>
-            <input
-              type="checkbox"
-              name="checkbox"
-              id="checkbox"
-              class="checkbox"
-              required
-            />
-            <label for="checkbox" class="label">
-              <div class="ball"></div>
-            </label>
-          </article>
-
-          <small>
-            I have read and agree to the terms of service outlined in the
-            Privacy Policy
-          </small>
-        </div>
-        <div class="checkboxes">
-          <article>
-            <input
-              type="checkbox"
-              name="checkbox-two"
-              id="checkbox-two"
-              class="checkbox"
-            />
-            <label for="checkbox-two" class="label">
-              <div class="ball"></div>
-            </label>
-          </article>
-
-          <small
-            >Receive emails about new updates and features. No spam
-            included</small
-          >
-        </div>
-
-        <button class="btn" type="submit">Create Account</button>
-      </form>
+    <div class="arrow_image">
+      <a class="left_arrow" href="{{ url_for('main')}}"
+        ><img src="/static/images/arrow.png" alt="left arrow"
+      /></a>
     </div>
+    <div class="content">
+      <div class="container">
+        <form autocomplete="off" action="{{ url_for('log_in')}}" method="POST">
+          <h1>Create An Account</h1>
+          <div class="form-inner">
+            <article>
+              <label for="firstName">First name</label>
+              <input type="text" name="firstName" id="firstName" required />
+            </article>
+            <article>
+              <label for="lastName">Last name</label>
+              <input type="text" name="lastName" id="lastName" required />
+            </article>
+          </div>
+          <div class="form-inner">
+            <article>
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" required />
+            </article>
+            <article>
+              <label for="dob">Date of birth</label>
+              <input type="date" name="dob" id="dob" required />
+            </article>
+          </div>
+          <div class="form-inner">
+            <article>
+              <label for="password-one">Password</label>
+              <input
+                type="password"
+                name="password-one"
+                id="password-one"
+                required
+              />
+            </article>
+            <article>
+              <label for="passwort-two">Confirm password</label>
+              <input
+                type="password"
+                name="password-two"
+                id="password-two"
+                required
+              />
+            </article>
+          </div>
+          <div class="checkboxes">
+            <article>
+              <input
+                type="checkbox"
+                name="checkbox"
+                id="checkbox"
+                class="checkbox"
+                required
+              />
+              <label for="checkbox" class="label">
+                <div class="ball"></div>
+              </label>
+            </article>
+
+            <small>
+              I have read and agree to the terms of service outlined in the
+              Privacy Policy
+            </small>
+          </div>
+          <div class="checkboxes">
+            <article>
+              <input
+                type="checkbox"
+                name="checkbox-two"
+                id="checkbox-two"
+                class="checkbox"
+              />
+              <label for="checkbox-two" class="label">
+                <div class="ball"></div>
+              </label>
+            </article>
+
+            <small
+              >Receive emails about new updates and features. No spam
+              included</small
+            >
+          </div>
+
+          <button class="btn" type="submit">Create Account</button>
+        </form>
+      </div>
+    </div>
+  </body>
     <link rel="stylesheet" href="index.css" />
   </body>
 </html>
